@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using Azure.Data.Tables;
 using Microsoft.Azure.Functions.Worker;
+using System.Text;
 
 namespace MyAzureFunctions
 {
@@ -16,13 +17,14 @@ namespace MyAzureFunctions
         }
 
         [Function("QueueTriggerFunction")]
-        public async Task Run([QueueTrigger("queue", Connection = "")] string myQueueItem)
+        public async Task Run([QueueTrigger("test", Connection = "AzureWebJobsStorage")] byte[] myQueueItem)
         {
-            _logger.LogInformation($"C# Queue trigger function processed: {myQueueItem}");
+            var message = Encoding.UTF8.GetString(myQueueItem);
+            _logger.LogInformation($"C# Queue trigger function processed: {message}");
 
             var entity = new TableEntity("PartitionKey", "RowKey")
             {
-                {"Message", myQueueItem}
+                {"Message", message}
             };
 
             await _tableClient.UpsertEntityAsync(entity);

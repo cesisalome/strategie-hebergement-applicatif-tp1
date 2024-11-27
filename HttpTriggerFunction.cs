@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using Azure.Storage.Queues;
 using Microsoft.Azure.Functions.Worker;
+using System.Text;
 
 namespace MyAzureFunctions
 {
@@ -21,8 +22,8 @@ namespace MyAzureFunctions
         {
             _logger.LogInformation("HTTP trigger function processed a request.");
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            await _queueClient.SendMessageAsync(requestBody);
+            var plainTextBytes = Encoding.UTF8.GetBytes("test");
+            await _queueClient.SendMessageAsync(Convert.ToBase64String(plainTextBytes));
 
             var response = req.CreateResponse(System.Net.HttpStatusCode.OK);
             await response.WriteStringAsync("Message sent to queue.");

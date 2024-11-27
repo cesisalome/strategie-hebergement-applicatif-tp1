@@ -10,13 +10,13 @@ var host = new HostBuilder()
         services.AddSingleton(s =>
         {
             var connectionString = context.Configuration["AzureWebJobsStorage"];
-            return new QueueClient(connectionString, "queue");
+            return new QueueClient(connectionString, "test");
         });
 
         services.AddSingleton(s =>
         {
             var connectionString = context.Configuration["AzureWebJobsStorage"];
-            return new TableClient(connectionString, "");
+            return new TableClient(connectionString, "test");
         });
     })
     .Build();
