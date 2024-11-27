@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stratégie d'hébergement applicatif - TP1", "Stratégie d'hébergement applicatif - TP1.csproj", "{7873E9A7-47C9-4887-BB4B-F70598FF4BA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "strategie-hebergement-applicatif-tp1", "strategie-hebergement-applicatif-tp1.csproj", "{C0CFA448-0D15-49A1-9D56-964F5292E8B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7873E9A7-47C9-4887-BB4B-F70598FF4BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7873E9A7-47C9-4887-BB4B-F70598FF4BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7873E9A7-47C9-4887-BB4B-F70598FF4BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7873E9A7-47C9-4887-BB4B-F70598FF4BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0CFA448-0D15-49A1-9D56-964F5292E8B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0CFA448-0D15-49A1-9D56-964F5292E8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0CFA448-0D15-49A1-9D56-964F5292E8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0CFA448-0D15-49A1-9D56-964F5292E8B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CE02B8B7-1792-48B2-9364-E6795BB39FDB}
+		SolutionGuid = {D9D313E8-7556-4C8A-A8C8-333DC5AE79BA}
 	EndGlobalSection
 EndGlobal
